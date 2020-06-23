@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ListBook";
+}
+
+<h2>List Book</h2>
+<div>
+    <ul>
+        @{ int i = 1;}
+        @foreach (var item in ViewBag.Books)
+        {
+            <li>@i - <b>@item</b></li>
+            i++;
+        }
+    </ul>
+</div>

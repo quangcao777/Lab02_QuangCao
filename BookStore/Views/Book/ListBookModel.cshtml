@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BookStore.Models.Book>
+
+@{
+    ViewBag.Title = "ListBookModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListBookModel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            <img src="@item.Image" width="95" title="cover"/>
+        </td>
+        <td><a href="/Book/CreateBook/@item.Id" title="Create Book">Create</a></td>
+        <td>
+            <a href="/Book/EditBook/@item.Id" title="Edit Book">Edit</a>
+        </td>
+        <td><a href="/Book/DeleteBook/@item.Id" title="Delete Book">Delete</a></td>
+        
+    </tr>
+}
+
+</table>
