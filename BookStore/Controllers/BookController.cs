@@ -27,17 +27,17 @@ namespace BookStore.Controllers
         public ActionResult ListBookModel()
         {
             var books = new List<Book>();
-            books.Add(new Book(1, "HTML5 & CSS3 The comple Manual", "Author Name Book 1", "../Content/Images/tải xuống.jpg"));
-            books.Add(new Book(2, "HTML5 & CSS3 Responsive web Design cookbook", "Author Name Book 2", "../Content/Images/tải xuống (1).jpg"));
-            books.Add(new Book(3, "Professional ASP.NET MVC3", "Author Name Book 3", "../Content/Images/tải xuống (2).jpg"));
+            books.Add(new Book(1, "HTML5 & CSS3 The comple Manual", "Author Name Book 1", "../Content/Images/tải xuống (3).jpg"));
+            books.Add(new Book(2, "HTML5 & CSS3 Responsive web Design cookbook", "Author Name Book 2", "../Content/Images/tải xuống.jpg"));
+            books.Add(new Book(3, "Professional ASP.NET MVC3", "Author Name Book 3", "../Content/Images/tải xuống (4).jpg"));
             return View(books);
         }
         public ActionResult EditBook(int id)
         {
             var books = new List<Book>();
-            books.Add(new Book(1, "HTML5 & CSS3 The comple Manual", "Author Name Book 1", "../Content/Images/tải xuống.jpg"));
-            books.Add(new Book(2, "HTML5 & CSS3 Responsive web Design cookbook", "Author Name Book 2", "../Content/Images/tải xuống (1).jpg"));
-            books.Add(new Book(3, "Professional ASP.NET MVC3", "Author Name Book 3", "../Content/Images/tải xuống (2).jpg"));
+            books.Add(new Book(1, "HTML5 & CSS3 The comple Manual", "Author Name Book 1", "../Content/Images/tải xuống (3).jpg"));
+            books.Add(new Book(2, "HTML5 & CSS3 Responsive web Design cookbook", "Author Name Book 2", "../Content/Images/tải xuống.jpg"));
+            books.Add(new Book(3, "Professional ASP.NET MVC3", "Author Name Book 3", "../Content/Images/tải xuống (4).jpg"));
             // Edit book
             Book book = new Book();
             foreach(Book b in books)
